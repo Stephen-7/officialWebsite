@@ -1,0 +1,64 @@
+@import "global";
+
+.view{
+  width: 100%;
+  min-height: @min-height;
+  background-image: url("../images/06.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.header-list {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.header-item {
+  height: 100%;
+  float: left;
+  line-height: 70px;
+}
+
+.header-item a {
+  width: 125px;
+  display: block;
+  color: #999999;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header-item a:hover {
+  color: #409EFF;
+}
+
+.topActive {
+  color: #409EFF!important;
+  position: relative;
+}
+
+.topActive::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #409EFF;
+}
+
+.header-logo {
+  width: 130px;
+  height: 35px;
+  float: right;
+  margin: 15px 0;
+  background-image: url("../images/order_icon_xiadanjia@2x.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+}
