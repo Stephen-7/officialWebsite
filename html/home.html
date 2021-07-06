@@ -11,17 +11,19 @@
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.10/favicon.ico"
           type="image/x-icon"/>
     <title>广州因爱技术有限公司</title>
-    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet/less" type="text/css" href="../css/home.less">
+    <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
 
 <div class="view">
+    <!--导航栏|start-->
     <nav class="navbar">
         <div class="container">
-            <div class="row">
-                <div class="col-md-9">
+            <div class="row" style="display: flex;align-items: center;">
+                <div class="col-sm-10 col-md-10">
+                    <p class="header-logo navbar-left">我是LOGO，现在没图，暂时用文字显示</p>
                     <ul class="header-list">
                         <li class="header-item"><a class="topActive" href="#">首页</a></li>
                         <li class="header-item"><a href="#">关于因爱</a></li>
@@ -31,191 +33,321 @@
                         <li class="header-item"><a href="#">联系我们</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <p class="header-logo"></p>
+                <div class="col-sm-2 col-md-2" style="display: flex;align-items: center">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="login glyphicon glyphicon-user" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">Stephen<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">个人信息</a></li>
+                                <li id="headerLogin"><a href="#">修改密码</a></li>
+                                <li><a href="#">我的收藏</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="headerLoginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">因爱账号</h4>
+                </div>
+                <form style="padding: 10px 25px">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">账号信息：</label>
+                        <input type="text" id="userLoginAccountNumber" class="form-control" placeholder="请填写账号">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">密码信息：</label>
+                        <input type="password" id="userLoginAccountPassword" class="form-control" placeholder="请填写密码">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" id="userLogin" class="btn btn-primary">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!--导航栏|end-->
 
-    <div class="container" style="background-color: red">123</div>
+    <!--公司介绍|start-->
+    <div class="container navRow">
+        <section class="row navItem">
+            <div class="navLeft">
+                <div class="navLeft-view">
+                    <div class="navLeft-view-item">
+<!--                        <h1 class="navLeft-view-item-h1">Technology makes life better yearning</h1>-->
+<!--                        <p class="navLeft-view-item-p">推进技术改变生活，让人们生活更美好</p>-->
+                        <h1 class="navLeft-view-item-h1">推进城市智慧物联网，为大众带来方便与美好生活</h1>
+                        <p class="navLeft-view-item-p">Technology changes life and makes life better</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="navRight"></div>
+        </section>
+        <section class="row navItem">
+            <div class="navLeft">
+                <div class="navLeft-view">
+                    <div class="navLeft-view-content navLeft-view-bgColor1">
+                        <div class="navLeft-view-content-left">
+                            <h3 class="navLeft-view-content-left-h3 fontColor1">MANAGED APP HOSTING</h3>
+                            <p class="navLeft-view-content-left-p fontColor1">Get all the benefits of using dedicated
+                                resources with ease of hosting management.</p>
+                        </div>
+                        <img src="https://storage.googleapis.com/stateless-d2c-io//2019/06/i2-1.svg"
+                             class="navLeft-view-content-img" alt="" height="139" width="203.606" data-image-size="full"
+                             data-stateless-media-bucket="stateless-d2c-io"
+                             data-stateless-media-name="/2019/06/i2-1.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row navItem">
+            <div class="navLeft">
+                <div class="navLeft-view">
+                    <div class="navLeft-view-content navLeft-view-bgColor2">
+                        <div class="navLeft-view-content-left">
+                            <h3 class="navLeft-view-content-left-h3 fontColor2">DEVOPS AS A SERVICE</h3>
+                            <p class="navLeft-view-content-left-p fontColor2">Automate DevOps routine like deployment,
+                                configuring, scaling and apps' management. Use own servers or any public cloud
+                                provider.</p>
+                        </div>
+                        <img src="https://storage.googleapis.com/stateless-d2c-io//2019/06/i1-1.svg"
+                             class="navLeft-view-content-img" alt="" height="138.644" width="166.703"
+                             data-image-size="full" data-stateless-media-bucket="stateless-d2c-io"
+                             data-stateless-media-name="/2019/06/i1-1.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="navLeft">
+                <div class="navLeft-view">
+                    <div class="navLeft-view-content navLeft-view-bgColor3">
+                        <div class="navLeft-view-content-left">
+                            <h3 class="navLeft-view-content-left-h3 fontColor2">ENTERPRISE SERVICES</h3>
+                            <p class="navLeft-view-content-left-p fontColor2">For those who are more comfortable to
+                                outsource infrastructure support.</p>
+                        </div>
+                        <img src="https://storage.googleapis.com/stateless-d2c-io//2019/06/i3-1.svg"
+                             class="navLeft-view-content-img" alt="" height="138.644" width="157.948"
+                             data-image-size="full" data-stateless-media-bucket="stateless-d2c-io"
+                             data-stateless-media-name="/2019/06/i3-1.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--公司介绍|end-->
+
+    <!--公司介绍|start-->
+    <div class="container-fluid service">
+        <div class="container service-view">
+            <div class="service-view-item">
+                <h1 class="h1 service-view-item-title">Free web calls for you and your customers</h1>
+                <p class="service-view-item-text">Channels is the only phone system that lets your customers call you
+                    directly from your website, completely for free.</p>
+                <div class="service-view-item-type">
+                    <input type="text" class="service-view-item-input" placeholder="请输入联系电话" maxlength="11">
+                    <button class="service-view-item-submit">提交</button>
+                </div>
+            </div>
+            <div class="service-view-item">
+                <img class="service-view-item-image" src="../images/07.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--公司介绍|end-->
+
+    <!--公司介绍|start-->
+    <div class="container-fluid dark">
+        <div class="dark-view">
+            <h2 class="dark_title text-center">Designed with <strong style="color: #71F0C6;">YOUR</strong> business in
+                mind</h2>
+            <div class="dark-item">
+                <div class="dark-item-view">
+                    <a href="#" class="dark-item-view-link">
+                        <p class="dark-item-view-top">
+                            <img class="dark-item-view-image"
+                                 src="https://www.channels.app/wp-content/themes/shapely/assets/images/target-landing/customer-support.svg"
+                                 alt="">
+                        </p>
+                        <h3 class="dark-item-view-title">Customer Support</h3>
+                        <p class="dark-item-view-text">Leverage customer data and provide excellent customer support
+                            that grows retention and saves time on both ends.</p>
+                    </a>
+                </div>
+                <div class="dark-item-view">
+                    <a href="#" class="dark-item-view-link">
+                        <p class="dark-item-view-top">
+                            <img class="dark-item-view-image"
+                                 src="https://www.channels.app/wp-content/themes/shapely/assets/images/target-landing/customer-support.svg"
+                                 alt="">
+                        </p>
+                        <h3 class="dark-item-view-title">Customer Support</h3>
+                        <p class="dark-item-view-text">Leverage customer data and provide excellent customer support
+                            that grows retention and saves time on both ends.</p>
+                    </a>
+                </div>
+                <div class="dark-item-view">
+                    <a href="#" class="dark-item-view-link">
+                        <p class="dark-item-view-top">
+                            <img class="dark-item-view-image"
+                                 src="https://www.channels.app/wp-content/themes/shapely/assets/images/target-landing/customer-support.svg"
+                                 alt="">
+                        </p>
+                        <h3 class="dark-item-view-title">Customer Support</h3>
+                        <p class="dark-item-view-text">Leverage customer data and provide excellent customer support
+                            that grows retention and saves time on both ends.</p>
+                    </a>
+                </div>
+                <div class="dark-item-view">
+                    <a href="#" class="dark-item-view-link">
+                        <p class="dark-item-view-top">
+                            <img class="dark-item-view-image"
+                                 src="https://www.channels.app/wp-content/themes/shapely/assets/images/target-landing/customer-support.svg"
+                                 alt="">
+                        </p>
+                        <h3 class="dark-item-view-title">Customer Support</h3>
+                        <p class="dark-item-view-text">Leverage customer data and provide excellent customer support
+                            that grows retention and saves time on both ends.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--公司介绍|end-->
+
+    <!--公司介绍|start-->
+    <div class="container-fluid service">
+        <div class="container service-view">
+            <div class="service-view-item">
+                <img class="service-view-item-image" src="../images/08.png" alt="">
+            </div>
+            <div class="service-view-item">
+                <h1 class="h1 service-view-item-title">Free web calls for you and your customers</h1>
+                <p class="service-view-item-text">Channels is the only phone system that lets your customers call you
+                    directly from your website, completely for free.</p>
+                <div class="service-view-item-type">
+                    <a href="#" class="service-view-item-a signColor">Sign Up Free</a>
+                    <a href="#" class="service-view-item-a bookColor">Book a demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--公司介绍|end-->
+
+    <div class="footer">
+        <h4 class="h4 footer-text text-center">我是底部信息的文字区域</h4>
+    </div>
 </div>
 
-<!--header|start-->
-<!--<nav class="navbar navbar-has-shadow navbar-default">-->
-<!--    <div class="container">-->
-<!--        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-<!--            <ul class="nav navbar-nav">-->
-<!--                <li class="active"><a href="#">首页</a></li>-->
-<!--                <li><a href="#">关于因爱</a></li>-->
-<!--                <li class="dropdown">-->
-<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
-<!--                       aria-expanded="false">因爱新闻<span class="caret"></span></a>-->
-<!--                    <ul class="dropdown-menu">-->
-<!--                        <li><a href="#">新闻中心</a></li>-->
-<!--                        <li><a href="#">视频中心</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--                <li><a href="#">产品领域</a></li>-->
-<!--                <li><a href="#">加入因爱</a></li>-->
-<!--                <li><a href="#">联系我们</a></li>-->
-<!--            </ul>-->
-
-
-<!--            <ul class="nav navbar-nav navbar-right">-->
-<!--                <li>-->
-<!--                    <form class="navbar-form navbar-left">-->
-<!--                        <div class="form-group">-->
-<!--                            <input type="text" class="form-control" id="headerSearchText" placeholder="Search">-->
-<!--                        </div>-->
-<!--                        <button type="submit" class="btn btn-default" id="headerSearch">搜索</button>-->
-<!--                    </form>-->
-<!--                </li>-->
-
-<!--                <li>-->
-<!--                    <a href="#" class="glyphicon glyphicon-user" role="button"-->
-<!--                       aria-haspopup="true" id="headerLogin" aria-expanded="false">未登录</a>-->
-<!--                </li>-->
-<!--                <li class="dropdown">-->
-<!--                    <a href="#" class="glyphicon glyphicon-user" data-toggle="dropdown" role="button"-->
-<!--                       aria-haspopup="true"  aria-expanded="false">未登录<span class="caret"></span></a>-->
-<!--                    <ul class="dropdown-menu">-->
-<!--                        <li><a href="#">个人信息</a></li>-->
-<!--                        <li><a href="#">修改密码</a></li>-->
-<!--                        <li><a href="#">我的收藏</a></li>-->
-<!--                        <li role="separator" class="divider"></li>-->
-<!--                        <li><a href="#">退出登录</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-
-<div class="modal fade" id="headerLoginModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">因爱账号登录</h4>
-            </div>
-            <form style="padding: 10px 25px">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">账号信息：</label>
-                    <input type="text" id="userLoginAccountNumber" class="form-control" placeholder="请填写账号">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">密码信息：</label>
-                    <input type="password" id="userLoginAccountPassword" class="form-control" placeholder="请填写密码">
-                </div>
-            </form>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" id="userLogin" class="btn btn-primary">提交</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--header|end-->
 
 <!--文字类型-->
-<p>...</p>
-<p class="lead">...</p>
-<p class="lead">
-    <mark>You</mark>
-    <small>can</small>
-    <del>use</del>
-    <ins>the</ins>
-    <u>mark</u><strong>tag</strong><em>to</em><s>highlight</s>text.
-</p>
+<!--<p>...</p>-->
+<!--<p class="lead">...</p>-->
+<!--<p class="lead">-->
+<!--    <mark>You</mark>-->
+<!--    <small>can</small>-->
+<!--    <del>use</del>-->
+<!--    <ins>the</ins>-->
+<!--    <u>mark</u><strong>tag</strong><em>to</em><s>highlight</s>text.-->
+<!--</p>-->
 
 <!--标题-->
-<h1 class="h1">我是标题1</h1>
-<h2 class="h2">我是标题2</h2>
-<h3 class="h3">我是标题3</h3>
-<h4 class="h4">我是标题4</h4>
-<h5 class="h5">我是标题5</h5>
-<h6 class="h6">我是标题6</h6>
-<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
-<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
-<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
-<h4>h4. Bootstrap heading <small>Secondary text</small></h4>
-<h5>h5. Bootstrap heading <small>Secondary text</small></h5>
-<h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+<!--<h1 class="h1">我是标题1</h1>-->
+<!--<h2 class="h2">我是标题2</h2>-->
+<!--<h3 class="h3">我是标题3</h3>-->
+<!--<h4 class="h4">我是标题4</h4>-->
+<!--<h5 class="h5">我是标题5</h5>-->
+<!--<h6 class="h6">我是标题6</h6>-->
+<!--<h1>h1. Bootstrap heading <small>Secondary text</small></h1>-->
+<!--<h2>h2. Bootstrap heading <small>Secondary text</small></h2>-->
+<!--<h3>h3. Bootstrap heading <small>Secondary text</small></h3>-->
+<!--<h4>h4. Bootstrap heading <small>Secondary text</small></h4>-->
+<!--<h5>h5. Bootstrap heading <small>Secondary text</small></h5>-->
+<!--<h6>h6. Bootstrap heading <small>Secondary text</small></h6>-->
 
 <!--居中方式-->
-<p class="text-left">Left aligned text.</p>
-<p class="text-center">Center aligned text.</p>
-<p class="text-right">Right aligned text.</p>
-<p class="text-justify">Justified text.</p>
-<p class="text-nowrap">No wrap text.</p>
+<!--<p class="text-left">Left aligned text.</p>-->
+<!--<p class="text-center">Center aligned text.</p>-->
+<!--<p class="text-right">Right aligned text.</p>-->
+<!--<p class="text-justify">Justified text.</p>-->
+<!--<p class="text-nowrap">No wrap text.</p>-->
 
 <!--大小写-->
-<p class="text-lowercase">Lowercased text.</p>
-<p class="text-uppercase">Uppercased text.</p>
-<p class="text-capitalize">Capitalized text.</p>
+<!--<p class="text-lowercase">Lowercased text.</p>-->
+<!--<p class="text-uppercase">Uppercased text.</p>-->
+<!--<p class="text-capitalize">Capitalized text.</p>-->
 
-<dl class="dl-horizontal">
-    <dt>Description lists</dt>
-    <dd>A description list is perfect for defining term</dd>
-    <dt>Description lists</dt>
-    <dd>A description list is perfect for defining term</dd>
-</dl>
+<!--<dl class="dl-horizontal">-->
+<!--    <dt>Description lists</dt>-->
+<!--    <dd>A description list is perfect for defining term</dd>-->
+<!--    <dt>Description lists</dt>-->
+<!--    <dd>A description list is perfect for defining term</dd>-->
+<!--</dl>-->
 
-<table class="table table-bordered table-condensed table-hover">
-    <caption>Optional table caption.</caption>
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-    </tr>
-    </tbody>
-</table>
+<!--<table class="table table-bordered table-condensed table-hover">-->
+<!--    <caption>Optional table caption.</caption>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>#</th>-->
+<!--        <th>First Name</th>-->
+<!--        <th>Last Name</th>-->
+<!--        <th>Username</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--        <th scope="row">1</th>-->
+<!--        <td>Mark</td>-->
+<!--        <td>Otto</td>-->
+<!--        <td>@mdo</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th scope="row">2</th>-->
+<!--        <td>Jacob</td>-->
+<!--        <td>Thornton</td>-->
+<!--        <td>@fat</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th scope="row">3</th>-->
+<!--        <td>Larry</td>-->
+<!--        <td>the Bird</td>-->
+<!--        <td>@twitter</td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
 
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox"> Check me out
-        </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<!--<form>-->
+<!--    <div class="form-group">-->
+<!--        <label for="exampleInputEmail1">Email address</label>-->
+<!--        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label for="exampleInputPassword1">Password</label>-->
+<!--        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label for="exampleInputFile">File input</label>-->
+<!--        <input type="file" id="exampleInputFile">-->
+<!--        <p class="help-block">Example block-level help text here.</p>-->
+<!--    </div>-->
+<!--    <div class="checkbox">-->
+<!--        <label>-->
+<!--            <input type="checkbox"> Check me out-->
+<!--        </label>-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-default">Submit</button>-->
+<!--</form>-->
 
 
 <!--轮播图-->
@@ -306,32 +438,27 @@
         })
 
 
-        // $("#headerSearch")[0].addEventListener("click", function () {
-        //     let text = $("#headerSearchText").val();
-        // })
-        //
-        //
-        // $("#headerLogin").click(function () {
-        //     $('#headerLoginModal').modal('show')
-        //     window.index = 0;
-        // });
-        //
-        // $("#userLogin")[0].addEventListener("click", function (e) {
-        //     window.index++;
-        //     if (window.index > 1) {
-        //         alert("请勿重复提交信息")
-        //         return;
-        //     }
-        //     let number = $("#userLoginAccountNumber").val();
-        //     let password = $("#userLoginAccountPassword").val();
-        //     if (!number || !password) {
-        //         alert("请填写账号信息");
-        //         return
-        //     }
-        //     $("#userLoginAccountNumber").val("");
-        //     $("#userLoginAccountPassword").val("");
-        //     $('#headerLoginModal').modal('hide')
-        // })
+        $("#headerLogin").click(function () {
+            $('#headerLoginModal').modal('show')
+            window.index = 0;
+        });
+
+        $("#userLogin")[0].addEventListener("click", function (e) {
+            window.index++;
+            if (window.index > 1) {
+                alert("请勿重复提交信息")
+                return;
+            }
+            let number = $("#userLoginAccountNumber").val();
+            let password = $("#userLoginAccountPassword").val();
+            if (!number || !password) {
+                alert("请填写账号信息");
+                return
+            }
+            $("#userLoginAccountNumber").val("");
+            $("#userLoginAccountPassword").val("");
+            $('#headerLoginModal').modal('hide')
+        })
 
     });
 </script>
