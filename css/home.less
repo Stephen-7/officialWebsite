@@ -5,20 +5,52 @@
   padding: 0 !important;
 }
 
-.view {
+.header{
   width: 100%;
-  min-height: @min-height;
-  background-image: url("../images/06.jpg");
-  background-repeat: no-repeat;
-  background-position: top right;
+  position: fixed;
+  top:0;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 1;
+}
+
+.headerBgColor{
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.04);
+}
+
+.header-row{
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  //@media only screen and (min-width: 1200px) {
+  //  width: 1200px;
+  //}
+  @media only screen and (max-width: 960px) and (min-width: 750px) {
+    width: 750px;
+  }
+  @media only screen and (max-width: 750px) {
+    width: 100%;
+  }
+}
+
+.header-row-left{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 
 .header-list {
-  margin: 0;
-  padding: 0;
-  float: left;
-  list-style-type: none;
-  overflow: hidden;
+  width: auto;
+  height: 100%;
+  //background-color: red;
 }
 
 .header-item {
@@ -57,11 +89,18 @@
   background-color: #409EFF;
 }
 
+.header-row-right{
+  width: auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header-logo {
   width: 130px;
   height: 35px;
-  float: right;
-  margin: 20px 10px 20px 0;
+  //margin: 20px 10px 20px 0;
   //background-image: url("../images/logo.png");
   background-repeat: no-repeat;
   background-position: center left;
@@ -69,11 +108,17 @@
 }
 
 .navRow {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  width: 100%;
+  height: auto;
+  padding: 200px 0 120px;
+  background-image: url("../images/06.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .navItem {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
@@ -97,7 +142,6 @@
 
 .navLeft-view-item-h1 {
   text-align: left;
-  //font-family: "Roboto", Sans-serif;
   font-size: 49px;
   font-weight: 900;
   margin-bottom: 20px;
@@ -106,7 +150,6 @@
 .navLeft-view-item-p {
   color: #54595f;
   font-size: 26px;
-  //letter-spacing: 6px;
 }
 
 .navLeft-view-content {
@@ -129,10 +172,6 @@
   background-color: #f0f0f0;
 }
 
-.navLeft-view-content-left {
-
-}
-
 .navLeft-view-content-left-h3 {
   font-size: 21px;
   margin-bottom: 20px;
@@ -144,10 +183,6 @@
 
 .fontColor2 {
   color: #333333;
-}
-
-.navLeft-view-content-left-p {
-  //color: #333333;
 }
 
 .navLeft-view-content-img {
@@ -170,6 +205,11 @@
   border-style: solid !important;
   border-width: 1px 1px 1px 1px !important;
   border-color: #7087b0 !important;
+  text-decoration: none;
+}
+
+.login:hover{
+  text-decoration: none;
 }
 
 .service {
@@ -178,7 +218,7 @@
 }
 
 .service-view {
-  padding: 100px 0;
+  padding: 120px 0;
   display: flex;
   align-items: center;
   display: flex;
@@ -283,7 +323,6 @@
 }
 
 .dark-view {
-  //width: 1200px;
   margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
@@ -348,13 +387,69 @@
 
 .footer {
   width: 100%;
-  height: 100px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   background-color: #242121 !important;
+}
+
+.footer-top{
+  width: 1300px;
+  height: 320px;
+  padding-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.footer-item{
+  width: 20%;
+}
+
+.footer-title{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: left;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.footer-content{
+  width: 100%;
+  padding: 5px 10px 5px 0;
+}
+
+.footer-content a{
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #999999;
+}
+
+.footer-next{
+  font-size: 16px;
+  color: #999999;
+  padding: 5px 35px 5px 0;
+}
+
+.footer-code{
+  width: 140px;
+  height: 140px;
+  display: block;
+}
+
+.footer-bottom{
+  width: 1200px;
+  height: 80px;
 }
 
 .footer-text{
   font-size: 16px;
-  color: #ffffff;
-  height: 100px;
-  line-height: 100px;
+  color: #999999;
+  height: 80px;
+  line-height: 80px;
 }
